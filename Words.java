@@ -18,13 +18,17 @@ public class Words
 
 	public void setWords(String s)
 	{
-		//Create a Scanner for the list of words in the string "s"
+		//Clear the list
+		wordlist.clear();
 
+		//Create a scanner to chop up the string of numbers
+		Scanner chopper = new Scanner(System.in);
 
-		//Continue to loop while there are more words to read
-
-			//Add objects of the type Word to our ArrayList "wordList"
-
+		//Chop up the string
+		while(chopper.hasNext())
+		{
+			wordlist.add(new Word(chopper.nextWord()));
+		}
 
 	}
 
@@ -67,6 +71,6 @@ public class Words
 
 	public String toString()
 	{
-	   return "";
+	   return "" + wordList;
 	}
 }
