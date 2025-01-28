@@ -8,18 +8,18 @@ public class Words
 
 	public Words()
 	{
-
+		wordList = new ArrayList<Word>();
 	}
 
 	public Words(String s)
 	{
-
+		setWords(s);
 	}
 
 	public void setWords(String s)
 	{
 		//Clear the list
-		wordlist.clear();
+		wordList.clear();
 
 		//Create a scanner to chop up the string of numbers
 		Scanner chopper = new Scanner(System.in);
@@ -27,7 +27,7 @@ public class Words
 		//Chop up the string
 		while(chopper.hasNext())
 		{
-			wordlist.add(new Word(chopper.nextWord()));
+			wordList.add(new Word(chopper.nextWord()));
 		}
 
 	}
@@ -35,9 +35,11 @@ public class Words
 	public int countWordsWithXChars(int size)
 	{
 		int count=0;
-
+		size = 5;
 		//for every Word in the ArrayList "wordList"
-
+		for(int i=0; i <wordList.Length(); i++)
+			if(Words.length()==5)
+				count++;				
 			//if the length of the "theWord" is the same as the parameter "size"
 
 		return count;
@@ -62,7 +64,7 @@ public class Words
 		int count=0;
 
 		//for every Word in the ArrayList "words"
-
+		
 			//if the number of vowels in "theWord" is the same as the parameter "numVowels"
 
 
